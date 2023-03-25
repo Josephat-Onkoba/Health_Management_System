@@ -1,0 +1,12 @@
+# Ignore compiled Python bytecode and optimized bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore environment variables
+.env
+
+# Ignore the SQLite database
+*.sqlite3
+*.db
+*.db.sqlite3

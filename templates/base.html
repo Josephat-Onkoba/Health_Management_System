@@ -1,0 +1,16 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}My Site{% endblock %}</title>
+  </head>
+  <body>
+    {% if user.is_authenticated %}
+      <p>Hello, {{ user.username }}. <a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+      <p><a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">Sign up</a></p>
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
